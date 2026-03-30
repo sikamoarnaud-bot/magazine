@@ -1,0 +1,434 @@
+/* ===================================================
+   Magazine — Feuille de styles principale
+   =================================================== */
+
+/* ---------- Reset & base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: #e8e4de;
+  color: #1a1a1a;
+  line-height: 1.7;
+}
+
+/* ---------- Page layout ---------- */
+.page {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: #fff;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.15);
+  padding: 4rem 4.5rem;
+  position: relative;
+  page-break-after: always;
+}
+
+/* ---------- COVER ---------- */
+.cover {
+  min-height: 560px;
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 4.5rem;
+}
+
+.cover-badge {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.3rem 0.9rem;
+  border-radius: 2px;
+  margin-bottom: 2.5rem;
+}
+
+.cover-content {
+  flex: 1;
+}
+
+.cover-category {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #e2b96f;
+  margin-bottom: 0.75rem;
+}
+
+.cover-title {
+  font-size: 5.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.cover-tagline {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
+}
+
+.cover-divider {
+  width: 60px;
+  height: 3px;
+  background: #e2b96f;
+  margin-bottom: 2rem;
+}
+
+.cover-teasers {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cover-teasers li {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  border-left: 2px solid #e2b96f;
+  padding-left: 0.75rem;
+}
+
+.cover-footer {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.25rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+/* ---------- TABLE OF CONTENTS ---------- */
+.toc {
+  background: #faf9f7;
+}
+
+.section-title {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e0dbd4;
+}
+
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.toc-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px dotted #d5cfc7;
+  font-size: 1.05rem;
+}
+
+.toc-num {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #e2b96f;
+  font-weight: 700;
+  min-width: 2.5rem;
+}
+
+.toc-link {
+  color: #1a1a1a;
+}
+
+/* ---------- ARTICLE SHARED ---------- */
+.article {
+  padding-top: 3rem;
+}
+
+.article-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #1a1a2e;
+}
+
+.article-rubric {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #0f3460;
+}
+
+.article-page-num {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #aaa;
+  letter-spacing: 0.1em;
+}
+
+.article-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #1a1a2e;
+  margin-bottom: 1.25rem;
+}
+
+.article-standfirst {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 2rem;
+  padding-left: 1.25rem;
+  border-left: 3px solid #e2b96f;
+}
+
+.article-lead p {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.65;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.article-body p {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.article-body.two-col {
+  columns: 2;
+  column-gap: 2.5rem;
+}
+
+.article-signature {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+
+.article-quote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #1a1a2e;
+  background: #f4f2ee;
+  border-left: 4px solid #e2b96f;
+  padding: 1.25rem 1.75rem;
+  margin: 2rem 0;
+  line-height: 1.65;
+}
+
+/* ---------- EDITORIAL ACCENT ---------- */
+.editorial-page {
+  border-top: 6px solid #1a1a2e;
+}
+
+/* ---------- CARDS (innovations) ---------- */
+.article-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.card {
+  background: #f4f2ee;
+  border-radius: 4px;
+  padding: 1.5rem;
+  border-top: 3px solid #0f3460;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ---------- TIPS (bien-être) ---------- */
+.article-tips {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.tip {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.25rem 1.5rem;
+  background: #faf9f7;
+  border-radius: 4px;
+  border-left: 3px solid #e2b96f;
+}
+
+.tip-num {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #e2b96f;
+  line-height: 1;
+  min-width: 2.5rem;
+}
+
+.tip h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.35rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.tip p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ---------- BACK COVER ---------- */
+.backcover {
+  min-height: 400px;
+  background: linear-gradient(145deg, #0f3460 0%, #16213e 60%, #1a1a2e 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.backcover-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.backcover-logo {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.backcover-tagline {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+.backcover-next {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #e2b96f;
+  margin-top: 1.25rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid #e2b96f;
+  border-radius: 2px;
+  letter-spacing: 0.08em;
+}
+
+.backcover-footer {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.08em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.25rem;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* ---------- Print styles ---------- */
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .page {
+    box-shadow: none;
+    margin: 0;
+    page-break-after: always;
+    max-width: 100%;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  .page {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+
+  .cover-title {
+    font-size: 3.5rem;
+  }
+
+  .article-body.two-col {
+    columns: 1;
+  }
+
+  .article-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .backcover-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
